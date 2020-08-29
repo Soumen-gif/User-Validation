@@ -52,5 +52,11 @@ public class UserValidationTest {
         boolean result = uv.validatePhone("91 9604445258");
         Assert.assertEquals(true, result);
     }
+    @Test
+    public void givenPassword_WhenPasswordIsMinimumEightDigit_ShouldReturn_True() {
+        UserValidation uv = new UserValidation();
+        boolean result = uv.validatePassword("Soumen18@");
+        Assert.assertEquals(true, result);
+    }
 
 }
