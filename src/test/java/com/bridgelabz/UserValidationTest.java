@@ -40,5 +40,17 @@ public class UserValidationTest {
         boolean result = uv.validateEmail("soumen@gmail.com");
         Assert.assertEquals(true, result);
     }
+    @Test
+    public void givenPhoneNumber_PhnNoIsFollowedByCountryCode_True() {
+        UserValidation uv = new UserValidation();
+        boolean result = uv.validatePhone("91 9932619681");
+        Assert.assertEquals(true, result);
+    }
+    @Test
+    public void givenPhoneNumber_phnNoIsTenDigit_True() {
+        UserValidation uv = new UserValidation();
+        boolean result = uv.validatePhone("91 9604445258");
+        Assert.assertEquals(true, result);
+    }
 
 }
