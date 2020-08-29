@@ -53,9 +53,15 @@ public class UserValidationTest {
         Assert.assertEquals(true, result);
     }
     @Test
-    public void givenPassword_WhenPasswordIsMinimumEightDigit_ShouldReturn_True() {
+    public void givenPassword_PasswordIsMinimumEightDigit_Return_True() {
         UserValidation uv = new UserValidation();
         boolean result = uv.validatePassword("Soumen18@");
+        Assert.assertEquals(true, result);
+    }
+    @Test
+    public void givenPassword_PasswordAtleastOneUpperCase_Return_True() {
+        UserValidation uv = new UserValidation();
+        boolean result = uv.validatePassword("Soumen42@");
         Assert.assertEquals(true, result);
     }
 
