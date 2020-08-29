@@ -64,5 +64,10 @@ public class UserValidationTest {
         boolean result = uv.validatePassword("Soumen42@");
         Assert.assertEquals(true, result);
     }
-
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleastOneNumericNumber_ShouldReturn_True() {
+        UserValidation uv = new UserValidation();
+        boolean result = uv.validatePassword("soumenVK18@");
+        Assert.assertEquals(true, result);
+    }
 }
